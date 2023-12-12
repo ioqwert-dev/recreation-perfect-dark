@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Checker : MonoBehaviour
 {
-    public abstract bool check();
+    public abstract bool Check();
 }

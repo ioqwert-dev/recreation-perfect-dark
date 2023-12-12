@@ -6,13 +6,8 @@ public class Clip : Checker
 {
     public Integer currentAmmo;
 
-    public override bool check()
+    public override bool Check()
     {
-        if (currentAmmo.data <= 0)
-        {
-            return false;
-        }
-
-        return true;
+        return currentAmmo.data > 0;
     }
 }

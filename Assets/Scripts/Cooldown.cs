@@ -7,7 +7,7 @@ public class Cooldown : Checker
     public float fireRate;
     private float _time;
 
-    public override bool check()
+    public override bool Check()
     {
         if (Time.time > _time)
         {

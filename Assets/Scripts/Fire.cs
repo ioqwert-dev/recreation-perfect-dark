@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fire : Action
+public class Fire : Executor
 {
-    public override void execute()
+    public override void Execute()
     {
         Debug.Log("Shoot");
     }

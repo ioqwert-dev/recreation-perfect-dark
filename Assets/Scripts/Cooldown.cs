@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cooldown : Checker
+public class Cooldown : Executor
 {
     public float fireRate;
-    private float _time;
+    [HideInInspector] public float _time;
 
-    public override bool Check()
+    public override bool Execute()
     {
         if (Time.time > _time)
         {

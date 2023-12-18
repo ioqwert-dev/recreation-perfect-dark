@@ -11,25 +11,19 @@ public class CallActions : MonoBehaviour
         Hold
     }
 
-    public List<Checker> checkers = new List<Checker>();
     public List<Executor> executors = new List<Executor>();
 
     public KeyPressMode mode;
     public KeyCode key;
     
-    public void Call()
+    public virtual void Call()
     {
-        foreach (Checker checker in checkers)
-        {
-            if (!checker.Check())
-            {
-                return;    
-            }
-        }
-
         foreach (Executor executor in executors)
         {
-            executor.Execute();
+            if (!executor.Execute())
+            {
+                return;
+            }
         }
     }
 

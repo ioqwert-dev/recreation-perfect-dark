@@ -6,8 +6,10 @@ public class Reload : Executor
 {
     public Integer ammo;
 
-    public override void Execute()
+    public override bool Execute()
     {
         ammo.data = 30;
+
+        return true;
     }
 }

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CooldownActive : Checker
+public class CooldownActive : Executor
 {
     public Cooldown cooldown;
 
-    public override bool Check()
+    public override bool Execute()
     {
-        return !cooldown.Check();
+        return Time.time > cooldown._time;
     }
 }

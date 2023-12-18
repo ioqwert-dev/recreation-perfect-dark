@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Fire : Executor
 {
-    public override void Execute()
+    public override bool Execute()
     {
         Debug.Log("Shoot");
+
+        return true;
     }
 }

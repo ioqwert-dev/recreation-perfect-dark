@@ -5,9 +5,11 @@ using UnityEngine;
 public class DecrementClip : Executor
 {
     public Integer currentAmmo;
+    public int amount;
 
-    public override void Execute()
+    public override bool Execute()
     {
-        currentAmmo.data -= 1;
+        currentAmmo.data -= amount;
+        return true;
     }
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Executor : MonoBehaviour
 {
-    public abstract void Execute();
+    public abstract bool Execute();
 }
